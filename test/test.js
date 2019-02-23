@@ -7,6 +7,13 @@ test('Проверка корректного ввода', () => {
   expect(received).toBe(expected);
 });
 
+test('Проверка корректного ввода', () => {
+  const expected = 'Имя корректно';
+  const validator = new Validator();
+  const received = validator.validateUsername('-the correct-name-');
+  expect(received).toBe(expected);
+});
+
 test('Проверка ввода числа', () => {
   const expected = 'Имя некорректно';
   const validator = new Validator();
